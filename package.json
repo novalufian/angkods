@@ -4,7 +4,11 @@
   "description": "landing page angkods.com",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "angkods" : "npm run gulp && concurrently \"npm run gulp-watch\" \"npm run lite\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server --open chromium ",
+    "gulp": "gulp",
+    "gulp-watch": "gulp watch"
   },
   "repository": {
     "type": "git",
@@ -18,6 +22,9 @@
   },
   "homepage": "https://github.com/novalufian/angkods#readme",
   "devDependencies": {
+    "concurrently": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
     "lite-server": "^2.3.0"
   }
 }
