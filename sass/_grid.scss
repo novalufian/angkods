@@ -1,0 +1,28 @@
+@mixin grid-angkods {
+     @for $i from 1 through 12 {
+        .col-#{$i} {
+            width: 100% / 12 * $i;
+            float: left;
+        }
+    }
+}
+[class*="col-"]{
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.container{
+    max-width: 1300px;
+    position: relative;
+    float: left;
+    display: block;
+}
+.row{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    @include grid-angkods;
+   
+}
+
+@include grid-angkods;

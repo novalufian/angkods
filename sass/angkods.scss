@@ -1,15 +1,18 @@
-$primary-color: #212121;
+@import '_variable';
+
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
-    background: $primary-color;
+    background: $base-color;
     h1 {
         margin: 10px;
         color: red;
     }
 }
-
-$class-slug: for !default;
-@for $i from 1 through 4 {
-    .#{$class-slug}-#{$i} {
-        width: 60px + $i
-    }
-}
+@import '_grid';
+@import '_alert';
+@import '_navigation';
+@import '_modal';
+@import '_button';

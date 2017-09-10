@@ -3,5 +3,14 @@
     "editor.fontSize": 20,
     "editor.fontWeight": "400",
     "editor.wordWrap": "on",
-    "editor.fontFamily": "'Wt-Position Mono'"
+    "editor.fontFamily": "'Wt-Position Mono'",
+
+    "liveSassCompile.settings.savePath": "/dist/css",
+    "liveSassCompile.settings.format": "expanded",
+    "liveSassCompile.settings.extensionName" : ".min.css",
+    "liveSassCompile.settings.excludeList": [
+       "**/node_modules/**",
+       ".vscode/**"
+    ],
+    "liveSassCompile.settings.generateMap" : true
 }
