@@ -1,18 +1,15 @@
-$primary-color : #212121;
-
-body{
-	background: $primary-color;
-
-	h1{
-		margin: 10px;
-		color : red
-		;
-	}
+$primary-color: #212121;
+body {
+    background: $primary-color;
+    h1 {
+        margin: 10px;
+        color: red;
+    }
 }
 
 $class-slug: for !default;
-
-@for $i from 1 through 4{
-  .#{$class-slug}-#{$i}{
-    width: 60px + $i}
+@for $i from 1 through 4 {
+    .#{$class-slug}-#{$i} {
+        width: 60px + $i
+    }
 }
