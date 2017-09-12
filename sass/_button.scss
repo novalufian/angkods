@@ -23,7 +23,24 @@
         float: left;
         vertical-align: center;
         font-size: 1em;
+        line-height: 1.2em;
+        padding: .25em .5em;
     }  
+}
+
+@mixin add-ons($color){
+    .add-ons{
+        position: relative;
+        float: right;
+        margin-right:-.5em ;
+        background: $color;
+        @extend .rounded;
+        i{
+            font-size: 1em;
+            line-height: 1.2em;
+            padding: .25em .4em; 
+        }
+    }
 }
 
 $color-list :primary danger warning success info default;
@@ -42,13 +59,14 @@ $bg-list-dark : $primary-color-dark $danger-color-dark $warning-color-dark $succ
             color : white;
         }
         box-shadow: 0 2px 15px rgba(nth($bg-list-dark, $i), .5);
+        @include add-ons(nth($bg-list-dark, $i));
     }
 
     .btn-#{$current-color}-o{
         border: 2px solid nth($bg-list, $i);
         background: $default-color-light;
         color: nth($bg-list, $i);
-
+        @include add-ons(nth($bg-list-dark, $i));
         &:hover{
             @extend .btn-#{$current-color};
         }

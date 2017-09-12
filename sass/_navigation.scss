@@ -8,20 +8,31 @@
     z-index: 500;
     // box-shadow: 0 5px 15px rgba($default-color-dark, 0.35);
 }
+
+.ads-btn{
+    position: fixed;
+    right: 30px;
+    p:before{
+        content: "adsvertise here";
+    }
+}
+
 .nav-bar{
     float: left;
     display: block;
     box-sizing: border-box;
     font-family: $fredoke;
-    // padding: .5em;
+    padding: .5em;
     li {
         float: left;
         position: relative;
         display: block;
         list-style: none;
-        padding: 1em;
-
+        padding: 1.2em .5em;
         a{
+            font-size: 1em;
+            line-height: 1.2em;
+            padding: .25em .4em; 
             text-decoration: none;
             color: $font-color-default-light ;
             &:hover{
@@ -30,5 +41,80 @@
         }
         
     }
+}
+
+@media(max-width:850px){
+    .ads-btn{
+        p:before{
+            content: "ads here";
+        }
+    }
+}
+
+#toggle-menu{
+    visibility: hidden;
+}
+
+@media(max-width : 800px){
+    #toggle-menu{
+        background: white;
+        visibility: visible;
+        position: fixed;
+        z-index: 600;
+        transform: rotate(270deg);
+        border: none;
+        font-size: 2em;
+        width: 2em;
+        height: 2em;
+        color: $font-color-default;
+        right: .75em;
+        bottom: 4vh;
+        border-radius: 100px;
+        box-shadow: 0 0 15px rgba($font-color-default, .6);
+
+        &:hover + .nav-bar,
+        &:active + .nav-bar{
+            visibility: visible;
+        }
+    }    
+    .nav-bar{
+        visibility: hidden;
+        position: fixed;
+        z-index: 550;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: white;
+
+        ul{
+            float: left;
+            box-sizing: border-box;
+            width: 70%;
+            padding: 0;
+            margin: 20vh 15%;
+
+            li{
+                margin: 0;
+                padding: 0;
+                float: left;
+                display: block;
+                width: 100%;
+                text-align: center;
+                a{
+                    background:white;
+                    color: $font-color-default;
+                    float: left;
+                    width: 100%;
+                    box-sizing: border-box;
+                    margin: 5px 0;
+                    padding: 1em;
+                    border-radius: 5px;
+                    border: 2px dashed $default-color-dark;
+                }
+            }
+        }
+    }
+    
 }
 

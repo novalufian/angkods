@@ -42,11 +42,21 @@ body h1 {
   z-index: 500;
 }
 
+.ads-btn {
+  position: fixed;
+  right: 30px;
+}
+
+.ads-btn p:before {
+  content: "adsvertise here";
+}
+
 .nav-bar {
   float: left;
   display: block;
   box-sizing: border-box;
   font-family: "Fredoka One", cursive;
+  padding: .5em;
 }
 
 .nav-bar li {
@@ -54,16 +64,88 @@ body h1 {
   position: relative;
   display: block;
   list-style: none;
-  padding: 1em;
+  padding: 1.2em .5em;
 }
 
 .nav-bar li a {
+  font-size: 1em;
+  line-height: 1.2em;
+  padding: .25em .4em;
   text-decoration: none;
   color: #474747;
 }
 
 .nav-bar li a:hover {
   color: #185acd;
+}
+
+@media (max-width: 850px) {
+  .ads-btn p:before {
+    content: "ads here";
+  }
+}
+
+#toggle-menu {
+  visibility: hidden;
+}
+
+@media (max-width: 800px) {
+  #toggle-menu {
+    background: white;
+    visibility: visible;
+    position: fixed;
+    z-index: 600;
+    transform: rotate(270deg);
+    border: none;
+    font-size: 2em;
+    width: 2em;
+    height: 2em;
+    color: #212121;
+    right: .75em;
+    bottom: 4vh;
+    border-radius: 100px;
+    box-shadow: 0 0 15px rgba(33, 33, 33, 0.6);
+  }
+  #toggle-menu:hover + .nav-bar,
+  #toggle-menu:active + .nav-bar {
+    visibility: visible;
+  }
+  .nav-bar {
+    visibility: hidden;
+    position: fixed;
+    z-index: 550;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+  }
+  .nav-bar ul {
+    float: left;
+    box-sizing: border-box;
+    width: 70%;
+    padding: 0;
+    margin: 20vh 15%;
+  }
+  .nav-bar ul li {
+    margin: 0;
+    padding: 0;
+    float: left;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .nav-bar ul li a {
+    background: white;
+    color: #212121;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 5px 0;
+    padding: 1em;
+    border-radius: 5px;
+    border: 2px dashed #c6c6c6;
+  }
 }
 
 .btn {
@@ -79,6 +161,8 @@ body h1 {
   float: left;
   vertical-align: center;
   font-size: 1em;
+  line-height: 1.2em;
+  padding: .25em .5em;
 }
 
 .btn-primary, .btn-primary-o:hover {
@@ -88,10 +172,36 @@ body h1 {
   box-shadow: 0 2px 15px rgba(16, 60, 137, 0.5);
 }
 
+.btn-primary .add-ons, .btn-primary-o:hover .add-ons {
+  position: relative;
+  float: right;
+  margin-right: -.5em;
+  background: #103c89;
+}
+
+.btn-primary .add-ons i, .btn-primary-o:hover .add-ons i {
+  font-size: 1em;
+  line-height: 1.2em;
+  padding: .25em .4em;
+}
+
 .btn-primary-o {
   border: 2px solid #185acd;
   background: white;
   color: #185acd;
+}
+
+.btn-primary-o .add-ons {
+  position: relative;
+  float: right;
+  margin-right: -.5em;
+  background: #103c89;
+}
+
+.btn-primary-o .add-ons i {
+  font-size: 1em;
+  line-height: 1.2em;
+  padding: .25em .4em;
 }
 
 .btn-danger, .btn-danger-o:hover {
@@ -101,10 +211,36 @@ body h1 {
   box-shadow: 0 2px 15px rgba(165, 19, 21, 0.5);
 }
 
+.btn-danger .add-ons, .btn-danger-o:hover .add-ons {
+  position: relative;
+  float: right;
+  margin-right: -.5em;
+  background: #a51315;
+}
+
+.btn-danger .add-ons i, .btn-danger-o:hover .add-ons i {
+  font-size: 1em;
+  line-height: 1.2em;
+  padding: .25em .4em;
+}
+
 .btn-danger-o {
   border: 2px solid #e52023;
   background: white;
   color: #e52023;
+}
+
+.btn-danger-o .add-ons {
+  position: relative;
+  float: right;
+  margin-right: -.5em;
+  background: #a51315;
+}
+
+.btn-danger-o .add-ons i {
+  font-size: 1em;
+  line-height: 1.2em;
+  padding: .25em .4em;
 }
 
 .btn-warning, .btn-warning-o:hover {
@@ -114,10 +250,36 @@ body h1 {
   box-shadow: 0 2px 15px rgba(165, 133, 1, 0.5);
 }
 
+.btn-warning .add-ons, .btn-warning-o:hover .add-ons {
+  position: relative;
+  float: right;
+  margin-right: -.5em;
+  background: #a58501;
+}
+
+.btn-warning .add-ons i, .btn-warning-o:hover .add-ons i {
+  font-size: 1em;
+  line-height: 1.2em;
+  padding: .25em .4em;
+}
+
 .btn-warning-o {
   border: 2px solid #f1c202;
   background: white;
   color: #f1c202;
+}
+
+.btn-warning-o .add-ons {
+  position: relative;
+  float: right;
+  margin-right: -.5em;
+  background: #a58501;
+}
+
+.btn-warning-o .add-ons i {
+  font-size: 1em;
+  line-height: 1.2em;
+  padding: .25em .4em;
 }
 
 .btn-success, .btn-success-o:hover {
@@ -127,10 +289,36 @@ body h1 {
   box-shadow: 0 2px 15px rgba(50, 119, 63, 0.5);
 }
 
+.btn-success .add-ons, .btn-success-o:hover .add-ons {
+  position: relative;
+  float: right;
+  margin-right: -.5em;
+  background: #32773f;
+}
+
+.btn-success .add-ons i, .btn-success-o:hover .add-ons i {
+  font-size: 1em;
+  line-height: 1.2em;
+  padding: .25em .4em;
+}
+
 .btn-success-o {
   border: 2px solid #48ad5c;
   background: white;
   color: #48ad5c;
+}
+
+.btn-success-o .add-ons {
+  position: relative;
+  float: right;
+  margin-right: -.5em;
+  background: #32773f;
+}
+
+.btn-success-o .add-ons i {
+  font-size: 1em;
+  line-height: 1.2em;
+  padding: .25em .4em;
 }
 
 .btn-info, .btn-info-o:hover {
@@ -140,10 +328,36 @@ body h1 {
   box-shadow: 0 2px 15px rgba(65, 153, 204, 0.5);
 }
 
+.btn-info .add-ons, .btn-info-o:hover .add-ons {
+  position: relative;
+  float: right;
+  margin-right: -.5em;
+  background: #4199cc;
+}
+
+.btn-info .add-ons i, .btn-info-o:hover .add-ons i {
+  font-size: 1em;
+  line-height: 1.2em;
+  padding: .25em .4em;
+}
+
 .btn-info-o {
   border: 2px solid #7db9dc;
   background: white;
   color: #7db9dc;
+}
+
+.btn-info-o .add-ons {
+  position: relative;
+  float: right;
+  margin-right: -.5em;
+  background: #4199cc;
+}
+
+.btn-info-o .add-ons i {
+  font-size: 1em;
+  line-height: 1.2em;
+  padding: .25em .4em;
 }
 
 .btn-default, .btn-default-o:hover {
@@ -153,13 +367,39 @@ body h1 {
   box-shadow: 0 2px 15px rgba(198, 198, 198, 0.5);
 }
 
+.btn-default .add-ons, .btn-default-o:hover .add-ons {
+  position: relative;
+  float: right;
+  margin-right: -.5em;
+  background: #c6c6c6;
+}
+
+.btn-default .add-ons i, .btn-default-o:hover .add-ons i {
+  font-size: 1em;
+  line-height: 1.2em;
+  padding: .25em .4em;
+}
+
 .btn-default-o {
   border: 2px solid #ececec;
   background: white;
   color: #ececec;
 }
 
-.rounded {
+.btn-default-o .add-ons {
+  position: relative;
+  float: right;
+  margin-right: -.5em;
+  background: #c6c6c6;
+}
+
+.btn-default-o .add-ons i {
+  font-size: 1em;
+  line-height: 1.2em;
+  padding: .25em .4em;
+}
+
+.rounded, .btn-primary .add-ons, .btn-primary-o .add-ons, .btn-danger .add-ons, .btn-danger-o .add-ons, .btn-warning .add-ons, .btn-warning-o .add-ons, .btn-success .add-ons, .btn-success-o .add-ons, .btn-info .add-ons, .btn-info-o .add-ons, .btn-default .add-ons, .btn-default-o .add-ons {
   border-radius: 100px;
 }
 
