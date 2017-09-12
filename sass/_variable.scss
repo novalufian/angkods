@@ -1,3 +1,43 @@
-$base-color : #f0f4f8;
-$primary-color: #212121;
-$primary-color-dark : darken($primary-color, 10%);
+// base color pattern
+$default-color : #ececec;
+$primary-color: #185acd;
+$danger-color : #e52023;
+$warning-color : #f1c202;
+$success-color : #48ad5c;
+$info-color : #7db9dc;
+
+$persent-basis : 15%;
+
+// lighten adn darken color
+// primary
+$primary-color-dark : darken($primary-color, $persent-basis);
+$primary-color-light : lighten($primary-color, $persent-basis);
+// danger
+$danger-color-dark : darken($danger-color, $persent-basis);
+$danger-color-light : lighten($danger-color, $persent-basis);
+// warning
+$warning-color-dark : darken($warning-color, $persent-basis);
+$warning-color-light : lighten($warning-color, $persent-basis);
+// success
+$success-color-dark : darken($success-color, $persent-basis);
+$success-color-light : lighten($success-color, $persent-basis);
+// info
+$info-color-dark : darken($info-color, $persent-basis);
+$info-color-light : lighten($info-color, $persent-basis);
+// default
+$default-color-dark : darken($default-color, $persent-basis);
+$default-color-light : lighten($default-color, $persent-basis);
+
+
+// font 
+// =============
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One, Racing+Sans+One');
+$fredoke : 'Fredoka One', cursive;
+
+.fredoke {font-family: $fredoke;}
+.racing { font-family: 'Racing Sans One', cursive;}
+
+$font-color-default : #212121;
+
+$font-color-default-dark : darken($font-color-default, $persent-basis);
+$font-color-default-light : lighten($font-color-default, $persent-basis);

@@ -3,16 +3,30 @@
 *{
     margin: 0;
     padding: 0;
+    font-size: 1em;
+    box-sizing: border-box;
+
 }
 body {
-    background: $base-color;
+    background: $default-color-light;
     h1 {
         margin: 10px;
-        color: red;
+        color: $danger-color;
     }
 }
-@import '_grid';
-@import '_alert';
+
+.clearfix{
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+    display: block;
+    padding: 3em;
+}
+
 @import '_navigation';
-@import '_modal';
+// @import '_grid';
+// @import '_alert';
+// @import '_modal';
 @import '_button';
+@import '_carosul';

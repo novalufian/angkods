@@ -11,3 +11,38 @@
 
 //media query
 //btn large when MD 1300
+.btn{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: .5em 1em;
+    margin: .5em;
+    border-radius: 5px;  
+
+    p{
+        float: left;
+        vertical-align: center;
+        font-size: 1em;
+    }  
+}
+
+.btn-primary{
+    border: 2px solid $primary-color;
+    background: $primary-color;
+    color: white;
+    box-shadow: 0 2px 15px rgba($primary-color-dark, .5);
+}
+
+.btn-primary-o{
+    border: 2px solid $primary-color;
+    background: $default-color-light;
+    color: $primary-color;
+
+    &:hover{
+        @extend .btn-primary;
+    }
+}
+
+.rounded{
+    border-radius: 100px;
+}

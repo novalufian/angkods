@@ -19,7 +19,8 @@
 }
 .row{
     position: relative;
-    display: block;
+    display: flex;
+    flex-basis: 12;
     box-sizing: border-box;
     @include grid-angkods;
    
