@@ -26,22 +26,36 @@
     }  
 }
 
-.btn-primary{
-    border: 2px solid $primary-color;
-    background: $primary-color;
-    color: white;
-    box-shadow: 0 2px 15px rgba($primary-color-dark, .5);
-}
+$color-list :primary danger warning success info default;
+$bg-list : $primary-color $danger-color $warning-color $success-color $info-color $default-color;
+$bg-list-dark : $primary-color-dark $danger-color-dark $warning-color-dark $success-color-dark $info-color-dark $default-color-dark;
 
-.btn-primary-o{
-    border: 2px solid $primary-color;
-    background: $default-color-light;
-    color: $primary-color;
+@each $current-color in $color-list{
+    $i : index($color-list, $current-color);
 
-    &:hover{
-        @extend .btn-primary;
+    .btn-#{$current-color}{
+        border: 2px solid nth($bg-list, $i);
+        background: nth($bg-list, $i);
+        @if  nth($bg-list, $i) == $default-color {
+            color: $font-color-default ;
+        } @else {
+            color : white;
+        }
+        box-shadow: 0 2px 15px rgba(nth($bg-list-dark, $i), .5);
     }
+
+    .btn-#{$current-color}-o{
+        border: 2px solid nth($bg-list, $i);
+        background: $default-color-light;
+        color: nth($bg-list, $i);
+
+        &:hover{
+            @extend .btn-#{$current-color};
+        }
+    }
+
 }
+    
 
 .rounded{
     border-radius: 100px;
