@@ -1,0 +1,117 @@
+.modal{
+    float: left;
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    background: rgba($overlay-bg, .4);
+    .main-modal{
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $default-color-light;
+        box-sizing: border-box;
+        border: 2px solid rgba($default-color, .5);
+        border-radius: 5px;
+        box-shadow: 1px 1px 40px rgba($overlay-bg, .05);
+
+        .modal-header{
+            float: left;
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+            color: $font-color-default-light;
+            .modal-title{
+                flex : 11;
+                box-sizing: border-box;
+                padding: 1em;
+
+                p{
+                    float: left;
+                    font-size: 1em;
+                    line-height: 1em;
+                    padding: .25em;
+                }
+                .add-ons i{
+                    @extend p;
+                    border-radius: 100px;
+                }
+            }
+        }
+        .modal-body{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 1.5em 2em;
+            color: $font-color-default-light;   
+            .modal-icon{
+                width: 100%;
+                text-align: center;
+            }  
+            p{
+                text-align: center;
+            }       
+        }
+
+        .modal-footer{
+            @extend .modal-body;
+            display: flex;
+            justify-content: space-around;
+            .btn-confirm{
+                flex: 2;
+                margin: 0 3em;
+            }
+            .btn-confirm-sigle{
+                flex: 1;
+                margin: 0 7.5em;
+            }
+        }
+    }
+    .modal-md{
+        width: 500px;
+        // min-height: 50vh;
+        margin: 25vh auto;
+    }
+}
+
+$color-list :primary danger warning success info default;
+$bg-list-dark : $primary-color-dark $danger-color-dark $warning-color-dark $success-color-dark $info-color-dark $default-color-dark;
+$bg-list : $primary-color $danger-color $warning-color $success-color $info-color $default-color;
+
+@each $current-color in $color-list{
+    $i : index($color-list, $current-color);
+    .modal-#{$current-color}{
+        .add-ons i{
+            color: white;
+            background: nth($bg-list-dark, $i);
+            box-shadow: 1px 1px 5px .2em rgba(0,0,0,.1),
+                        0 0 0 .5em nth($bg-list, $i),
+                        1px 1px 10px .7em rgba(0,0,0,.15);
+            margin: 0 1em;
+        }
+    }
+
+}
+
+@media(max-width : 800px){
+    .modal{
+        .modal-md{
+            width:300px;
+            margin: 25vh auto;
+        }
+
+        .main-modal{
+            .modal-footer{
+                .btn-confirm{
+                    margin: 0 .5em;
+                }
+
+                 .btn-confirm-sigle{
+                    margin: 0 3em;
+                }
+            }
+        }
+
+    }
+}

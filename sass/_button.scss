@@ -78,3 +78,17 @@ $bg-list-dark : $primary-color-dark $danger-color-dark $warning-color-dark $succ
 .rounded{
     border-radius: 100px;
 }
+.btn-close{
+    flex: 1;
+    align-items: flex-start;
+    float: right;
+    font-family: $fredoke;
+    line-height: 1em;
+    font-size: 1em;
+    border: none;
+    background: transparent;
+    height: 1em;
+    width: 1em;
+    margin-top: .5em;
+    color: $default-color-dark;
+}

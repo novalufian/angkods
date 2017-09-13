@@ -33,13 +33,14 @@ $default-color-light : lighten($default-color, $persent-basis);
 
 // font 
 // =============
-@import url('https://fonts.googleapis.com/css?family=Fredoka+One, Racing+Sans+One');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One, Racing+Sans+One, Open+Sans');
 $fredoke : 'Fredoka One', cursive;
 
 .fredoke {font-family: $fredoke;}
 .racing { font-family: 'Racing Sans One', cursive;}
+.open-sans{font-family: 'Open Sans', sans-serif;}
 
 $font-color-default : #212121;
 
-$font-color-default-dark : darken($font-color-default, $persent-basis);
-$font-color-default-light : lighten($font-color-default, $persent-basis);
+$font-color-default-dark : darken($font-color-default, $persent-basis*2);
+$font-color-default-light : lighten($font-color-default, $persent-basis*2);

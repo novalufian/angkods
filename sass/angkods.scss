@@ -5,9 +5,12 @@
     padding: 0;
     font-size: 1em;
     box-sizing: border-box;
+    border: none;
+    outline: none;
 
 }
 body {
+    z-index: 0;
     background: $default-color-light;
     h1 {
         margin: 10px;
@@ -25,8 +28,8 @@ body {
 }
 
 @import '_navigation';
+@import '_modal';
 // @import '_grid';
 // @import '_alert';
-// @import '_modal';
 @import '_button';
 @import '_carosul';
