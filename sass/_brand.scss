@@ -1,0 +1,30 @@
+.brand{
+    float: left;
+    padding: .5em 1em;
+    font-size: 2em;
+    color: $warning-color;
+    cursor: pointer;
+
+    p{
+        text-shadow: 
+        2px 2px 0 rgba($warning-color-dark, 1),
+        2px -2px 0 rgba($warning-color-dark, 1),
+        -2px 2px 0 rgba($warning-color-dark, 1),
+        -2px -2px 0 rgba($warning-color-dark, 1),
+        3px 3px 0 rgba($default-color, 1),
+        3px -3px 0 rgba($default-color, 1),
+        -3px 3px 0 rgba($default-color, 1),
+        -3px -3px 0 rgba($default-color, 1);
+        display: block;
+       
+        &:after{
+            content: ".com";
+            display: block;
+            font-size: .5em;
+            color: $default-color;
+            margin: -10px;
+            text-align: right;
+        }
+    }
+
+}

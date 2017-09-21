@@ -1,0 +1,11 @@
+[class*="g-icon-hiddeon-"]:after{
+    color : $font-color-default;
+}
+
+.g-icon-hidden-home:after{
+    content: "home";
+}
+.g-icon-hidden-settings-applications:after{
+    content: "settings_applications";
+    color : $font-color-default;
+}

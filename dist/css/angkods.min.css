@@ -79,7 +79,7 @@ body h1 {
   line-height: 1.2em;
   padding: .25em .4em;
   text-decoration: none;
-  color: #6e6e6e;
+  color: white;
 }
 
 .nav-bar li a:hover {
@@ -118,7 +118,7 @@ body h1 {
     visibility: visible;
   }
   .nav-bar {
-    visibility: hidden;
+    visibility: visible;
     position: fixed;
     z-index: 550;
     top: 0;
@@ -140,18 +140,24 @@ body h1 {
     float: left;
     display: block;
     width: 100%;
+    color: #212121;
+  }
+  .nav-bar ul li i {
     text-align: center;
+    float: left;
+    width: 20%;
+    margin: 5px 0;
+    padding: .6em 1em;
+    font-size: 1.5em;
   }
   .nav-bar ul li a {
     background: white;
-    color: #212121;
     float: left;
-    width: 100%;
+    width: 80%;
     box-sizing: border-box;
     margin: 5px 0;
     padding: 1em;
     border-radius: 5px;
-    border: 2px dashed #c6c6c6;
   }
 }
 
@@ -291,6 +297,28 @@ body h1 {
   .modal .main-modal .modal-footer .btn-confirm-sigle {
     margin: 0 3em;
   }
+}
+
+.brand {
+  float: left;
+  padding: .5em 1em;
+  font-size: 2em;
+  color: #f1c202;
+  cursor: pointer;
+}
+
+.brand p, .brand .modal .main-modal .modal-header .modal-title .add-ons i, .modal .main-modal .modal-header .modal-title .add-ons .brand i {
+  text-shadow: 2px 2px 0 #a58501, 2px -2px 0 #a58501, -2px 2px 0 #a58501, -2px -2px 0 #a58501, 3px 3px 0 #ececec, 3px -3px 0 #ececec, -3px 3px 0 #ececec, -3px -3px 0 #ececec;
+  display: block;
+}
+
+.brand p:after, .brand .modal .main-modal .modal-header .modal-title .add-ons i:after, .modal .main-modal .modal-header .modal-title .add-ons .brand i:after {
+  content: ".com";
+  display: block;
+  font-size: .5em;
+  color: #ececec;
+  margin: -10px;
+  text-align: right;
 }
 
 .btn {
@@ -563,12 +591,60 @@ body h1 {
   color: #c6c6c6;
 }
 
+.banner {
+  background: #212121;
+  width: 100%;
+  height: 90vh;
+}
+
+.banner:after {
+  float: left;
+  content: "";
+  height: 20vh;
+  width: 100%;
+  margin-top: -10vh;
+  background: white;
+  transform: skewY(-3deg);
+}
+
 .banner .carosul-item {
   float: left;
   width: 80%;
   margin: 0 10%;
   height: 80vh;
   padding: 10px;
+}
+
+.banner .carosul-item h1 {
+  width: 70%;
+  margin: 3em 1em;
+  font-size: 3em;
+  color: #ececec;
+}
+
+.img {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  background: red;
+  bottom: 3vh;
+  right: 5%;
+  background-image: url("../images/angkot-img.jpg");
+  background-size: cover;
+  border-radius: 100%;
+}
+
+[class*="g-icon-hiddeon-"]:after {
+  color: #212121;
+}
+
+.g-icon-hidden-home:after {
+  content: "home";
+}
+
+.g-icon-hidden-settings-applications:after {
+  content: "settings_applications";
+  color: #212121;
 }
  
 

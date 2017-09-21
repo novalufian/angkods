@@ -34,7 +34,7 @@
             line-height: 1.2em;
             padding: .25em .4em; 
             text-decoration: none;
-            color: $font-color-default-light ;
+            color: $default-color-light ;
             &:hover{
                 color: $primary-color;
             }
@@ -78,7 +78,7 @@
         }
     }    
     .nav-bar{
-        visibility: hidden;
+        visibility: visible;
         position: fixed;
         z-index: 550;
         top: 0;
@@ -100,17 +100,24 @@
                 float: left;
                 display: block;
                 width: 100%;
-                text-align: center;
+                color: $font-color-default;
+                i{
+                    text-align: center;
+                    float: left;
+                    width: 20%;
+                    margin: 5px 0;
+                    padding: .6em 1em;
+                    font-size: 1.5em;
+                }
                 a{
                     background:white;
-                    color: $font-color-default;
                     float: left;
-                    width: 100%;
+                    width: 80%;
                     box-sizing: border-box;
                     margin: 5px 0;
                     padding: 1em;
                     border-radius: 5px;
-                    border: 2px dashed $default-color-dark;
+                    // border: 2px dashed $default-color-dark;
                 }
             }
         }

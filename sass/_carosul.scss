@@ -1,9 +1,45 @@
 .banner{
+    background: #212121;
+    width: 100%;
+    height: 90vh;
+    &:after{
+        float: left;
+        content: "";
+        height: 20vh;
+        width: 100%;
+        margin-top: -10vh;
+        background: $default-color-light;
+        transform: skewY(-3deg)
+    }
+
+     
+
     .carosul-item{
         float: left;
         width: 80%;
         margin: 0 10%;
         height: 80vh;
         padding: 10px;
+       
+
+        h1{
+            width: 70%;
+            margin: 3em 1em;
+            font-size: 3em;
+            color: $default-color;
+
+        }
     }
+}
+
+.img{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background: red;
+    bottom: 3vh;
+    right: 5%;
+    background-image: url("../images/angkot-img.jpg");
+    background-size: cover;
+    border-radius: 100%;
 }
